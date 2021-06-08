@@ -156,7 +156,7 @@ img {
   margin-right: 5px;
 }
 
-.aa-filter-btn {  
+.aa-filter-btn {
   color: #fff;
   font-size: 15px;
   height: 30px;
@@ -381,7 +381,7 @@ img {
   font-family: "Raleway", sans-serif;
   font-size: 28px;
 }
-#aa-header .aa-header-bottom .aa-header-bottom-area .aa-logo a:hover {  
+#aa-header .aa-header-bottom .aa-header-bottom-area .aa-logo a:hover {
   color: #333;
 }
 #aa-header .aa-header-bottom .aa-header-bottom-area .aa-logo a > span {
@@ -654,7 +654,7 @@ img {
   padding: 8px 15px;
 }
 #menu .menu-area .navbar-default .navbar-nav .dropdown-menu li a:hover, #menu .menu-area .navbar-default .navbar-nav .dropdown-menu li a:focus {
-  color: #fff; 
+  color: #fff;
 }
 #menu .menu-area .navbar-default .navbar-nav .dropdown-menu .dropdown-header {
   color: #555;
@@ -821,7 +821,7 @@ img {
   text-align: center;
 }
 #aa-slider .aa-slider-area .seq-title span {
-  background-color: #fff;  
+  background-color: #fff;
   display: inline-block;
   padding: 6px 15px;
   text-transform: uppercase;
@@ -857,7 +857,7 @@ img {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-#aa-slider .aa-slider-area .seq .seq-next:hover, #aa-slider .aa-slider-area .seq .seq-next:focus {  
+#aa-slider .aa-slider-area .seq .seq-next:hover, #aa-slider .aa-slider-area .seq .seq-next:focus {
   border: 1px solid #f9f9f9;
   color: #fff;
 }
@@ -980,7 +980,7 @@ img {
 }
 #aa-promo .aa-promo-area .aa-promo-banner .aa-prom-content span {
   background-color: #FFF;
-  padding: 5px 10px;  
+  padding: 5px 10px;
 }
 #aa-promo .aa-promo-area .aa-promo-banner .aa-prom-content h4 {
   color: #fff;
@@ -2439,7 +2439,7 @@ img {
   padding: 20px 15px;
 }
 #checkout .checkout-area .checkout-left .panel-group .panel-default .panel-heading .panel-title a {
-  display: block; 
+  display: block;
 }
 #checkout .checkout-area .checkout-left .panel-group .aa-checkout-coupon .aa-coupon-code {
   border: 1px solid #e5e5e5;
@@ -3271,7 +3271,7 @@ img {
   float: left;
   width: 100% !important;
 }
-#aa-contact .aa-contact-area .aa-contact-address .aa-contact-address-left .comments-form button { 
+#aa-contact .aa-contact-area .aa-contact-address .aa-contact-address-left .comments-form button {
   width: 100px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -4179,8 +4179,383 @@ img {
     padding: 6px;
     width: 90px;
   }
-  #aa-header .aa-header-top .aa-header-top-right .aa-head-top-nav-right li a {   
+  #aa-header .aa-header-top .aa-header-top-right .aa-head-top-nav-right li a {
     padding: 5px 2px;
   }
 }
 
+
+
+
+
+
+/* TEST CODE: DO NOT USE THESE IN PRODUCTION */
+.carousel-slide:nth-of-type(1){
+	background-color:pink;
+}
+.carousel-slide:nth-of-type(2){
+	background-color:orange;
+}
+.carousel-slide:nth-of-type(3){
+	background-color:yellow;
+}
+.carousel-slide:nth-of-type(4){
+	background-color:lightgreen;
+}
+.carousel-slide:nth-of-type(5){
+	background-color:cyan;
+}
+/* END TEST CODE; */
+
+
+
+
+
+.carousel {
+	width:100%;
+	height:320px;
+	position:relative;
+	overflow:hidden;
+}
+
+.carousel-deck {
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow:hidden;
+}
+
+.carousel-slide {
+	position:absolute;
+	left:100%;
+	top:0;
+
+	width:100%;
+	height:100%;
+
+	/*transition: left .5s;*/
+}
+
+.carousel-slide.atLeft {
+	left:-100%;
+}
+.carousel-slide.atRight {
+	left:100%;
+}
+.carousel-slide.atCenter {
+	left:0;
+}
+.moving {
+	transition: left .4s;
+}
+
+
+
+
+.carousel-controls {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+
+	text-align:center;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.carousel-move-left,
+.carousel-move-right,
+.carousel-paginate {
+	width:2em;
+	height:2em;
+	text-align:center;
+	line-height:2em;
+	font-family:monospace;
+
+	background-color:rgba(255,255,255,0.5);
+	border-radius:50%;
+
+	position:absolute;
+	bottom:10px;
+	transition:all .3s;
+}
+.carousel-move-left {
+	left:-2em;
+}
+.carousel:hover .carousel-move-left {
+	left:10px;
+}
+.carousel-move-right {
+	right:-2em;
+}
+.carousel:hover .carousel-move-right {
+	right:10px;
+}
+.carousel-pagination{
+	display:inline-block;
+	position:relative;
+	bottom:-1.25em;
+	transition: all .3s;
+}
+.carousel:hover .carousel-pagination{
+	bottom:10px;
+}
+.carousel-paginate {
+	position:static;
+	font-size:1rem;
+	border-width:0;
+	cursor:pointer;
+	outline:0;
+	display:inline-block;
+	color:rgba(0,0,0,0.2);
+}
+
+.carousel-paginate.active {
+	background-color:rgba(255,255,255,0.7);
+	color:rgba(0,0,0,1);
+	cursor:pointer;
+}
+.carousel-move-left:hover,
+.carousel-move-right:hover,
+.carousel-paginate:hover {
+	background-color:rgba(255,255,255,1);
+	color:rgba(0,0,0,1);
+	cursor:pointer;
+}
+
+
+.carousel[data-controls=pagination] .carousel-move-right,
+.carousel[data-controls=pagination] .carousel-move-left {
+	display:none;
+}
+.carousel[data-controls=directional] .carousel-pagination {
+	display:none;
+}
+.carousel[data-controls=none] .carousel-controls {
+	display:none;
+}
+
+
+/*-----Testimonial-------*/
+
+
+.heading {
+    text-align: center;
+    color: #454343;
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    z-index: 999;
+}
+.white-heading{
+    color: #ffffff;
+}
+.heading:after {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 40px;
+    width: 180px;
+    border-radius: 4px;
+    transform: translateX(-50%);
+    background: url(img/heading-line.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.white-heading:after {
+    background: url(https://i.ibb.co/d7tSD1R/heading-line-white.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.heading span {
+    font-size: 18px;
+    display: block;
+    font-weight: 500;
+}
+.white-heading span {
+    color: #ffffff;
+}
+
+
+/*-----Testimonial-------*/
+/* ------testimonial  close-------*/
+
+/* ------Main Carousel  -------*/
+
+
+
+.gallery {
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: repeat(10, 80vw);
+	grid-template-rows: 1fr;
+	grid-column-gap: 1rem;
+	grid-row-gap: 1rem;
+	overflow: scroll;
+	height: 100%;
+	scroll-snap-type: both mandatory;
+	scroll-padding: 1rem;
+}
+
+.active {
+	scroll-snap-type: unset;
+}
+
+li {
+	scroll-snap-align: center;
+	display: inline-block;
+	border-radius: 3px;
+	font-size: 0;
+}
+
+/* ------Main Carousel  close-------*/
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: system-ui;
+}
+
+.visuallyhidden {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  opacity: 0;
+
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.card-carousel {
+  --card-width: 80%;
+  --card-max-width: 280px;
+  --card-height: 350px;
+  --carousel-min-width: 100%;
+  z-index: 1;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: var(--card-height);
+  min-width: var(--carousel-min-width);
+  transition: filter .3s ease;
+}
+
+@media screen and (max-width: 640px) {
+  .card-carousel {
+    margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
+  }
+}
+
+.card-carousel.smooth-return {
+  transition: all .2s ease;
+}
+
+.card-carousel .card {
+  background: whitesmoke;
+  width: var(--card-width);
+  max-width: var(--card-max-width);
+  text-align: center;
+  padding: 1em;
+  min-width: 250px;
+  height: var(--card-height);
+  position: absolute;
+  margin: 0 auto;
+  color: rgba(0,0,0,.5);
+  transition: inherit;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  border-radius: 1em;
+  filter: brightness(.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card.highlight {
+  filter: brightness(1)
+}
+
+
+.card:nth-of-type(1) .image-container {
+    background-image: url("https://hindustan-polymers.github.io/img/1.png");
+}
+
+.card:nth-of-type(2) .image-container {
+  background-image: url("https://hindustan-polymers.github.io/img/2.png")
+}
+
+.card:nth-of-type(3) .image-container {
+  background-image: url("https://hindustan-polymers.github.io/img/3.png")
+}
+.card:nth-of-type(4) .image-container {
+  background-image: url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+}
+.card:nth-of-type(5) .image-container {
+  background-image: url("https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg")
+}
+
+
+
+.image-container {
+  width: 8em;
+  height: 8em;
+  position: relative;
+  background-size: cover;
+  margin-bottom: 2em;
+  border-radius: 100%;
+  padding: 1em;
+  -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+-moz-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+
+}
+
+.image-container::after {
+  content: "";
+  display: block;
+  width: 120%;
+  height: 120%;
+  border: solid 3px rgba(0,0,0,.1);
+  border-radius: 100%;
+  position: absolute;
+  top: calc(-10% - 3px);
+  left: calc(-10% - 3px);
+}
+
+h2 {
+  padding: 1em;
+  margin-top: 1em;
+  background: rgba(0,0,0,.3);
+  text-align: center;
+  color: white;
+  border-radius: .2em;
+  display: inline-block;
+  transform: translateX(calc((100vw - 100%) / 2))
+}
+
+h2 a {
+  color: #f5b916
+}
